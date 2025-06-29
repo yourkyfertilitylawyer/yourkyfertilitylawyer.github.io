@@ -23,12 +23,10 @@ body {
 /* Header container */
 .site-header {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px;
   background-color: white;
-  gap: 15px;
+  margin-left: 20px;
 }
 
 /* Logo */
@@ -177,6 +175,9 @@ table, th {
 td {
   border: none;
   margin: 10px;
+}
+
+.table-footer-notes {
 }
 
 footer {
