@@ -33,55 +33,12 @@ body {
 
 /* Logo */
 .logo {
-  height: 60px;
+  height: 80px;
   width: auto;
-  flex-shrink: 0;
+  margin-right: 20px;
 }
 
-/* Title + Tagline */
-.text-container {
-  flex: 1 1 100%;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.main-title {
-  font-size: 46px;
-  color: orange;
-  font-family: 'Broadway', serif;
-  text-shadow: 2px 2px #ccc;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 1rem;
-  color: orange;
-  font-family: 'Notable', serif;
-  margin: 0;
-}
-
-/* Navigation links */
-.nav-links {
-  display: flex;
-  flex: 1 1 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.nav-links a {
-  font-size: 1rem;
-  color: orange;
-  font-family: 'Broadway', serif;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* About Me Section */
+/* About me table */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -124,155 +81,7 @@ body {
   font-family: 'Comic Sans', serif;
 }
 
-/* Tables */
-table {
-  margin-top: 30px;
-  margin-left: 150px;
-  width: 50%;
-}
-
-table, th {
-  border: none;
-  border-color: black;
-  margin: auto;
-}
-
-td {
-  border: none;
-  margin: 10px;
-}
-
-.custom-table {
-  width: 100%;
-  height: auto;
-  margin: 50px auto;
-  border-collapse: collapse;
-  background-image: url(louisville_skyline.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  border: none;
-}
-
-/* Footer */
-footer {
-  margin: none;
-  width: 100vw;
-  padding: 15px;
-  background-color: gray;
-  text-align: center;
-}
-
-/* Links */
-a {
-  font-family: 'Broadway', serif;
-}
-a:link {
-  color: orange;
-  text-decoration: none;
-}
-
-a:link2 {
-  color: black;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: rgb(28, 3, 87);
-}
-
-a:hover {
-  color: rgb(27, 164, 182);
-  text-decoration: none;
-}
-
-a:active {
-  color: black;
-}
-
-/* Image and Overlay */
-.image-overlay-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-}
-
-.background-image {
-  width: 100vw;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 105%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  font-size: 30px;
-  font-family: 'Broadway', serif;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px 40px;
-  border-radius: 10px;
-  width: 1200px;
-  height: 300px;
-  margin: 0;
-}
-
-.overlay-text h2 {
-  margin: 0;
-  font-size: 4rem;
-}
-
-.overlay-text a {
-  color: #f9f4eb;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.overlay-text a:hover {
-  color: #ffc107;
-}
-
-/* Buttons */
-.btn-orange {
-  position: absolute;
-  display: inline-block;
-  background-color: #ff7a00;
-  color: white;
-  padding: 12px 20px;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn-orange:hover {
-  background-color: #e66a00;
-}
-
-/* Typography */
-p {
-  font-family: 'Gill Sans MT Condensed', Times, serif;
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-family: 'Gill Sans MT Condensed', Times, serif;
-  font-size: 1rem;
-}
-
-h3 {
-  margin: 0;
-  font-family: 'Broadway', sans-serif;
-  font-size: 4rem;
-}
-
-/* Responsive Design */
+/* Responsive styles */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -332,12 +141,167 @@ h3 {
   h2, h3 {
     font-size: 1.5rem;
   }
+}
 
-  .logo {
-    height: 50px;
-  }
+/* Text styling */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
 
-  .nav-links a {
-    font-size: 0.9rem;
-  }
+.main-title {
+  font-size: 46px;
+  color: orange;
+  font-family: 'Broadway', serif;
+  text-shadow: 2px 2px #ccc;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: orange;
+  font-family: 'Notable', serif;
+}
+
+table {
+  margin-top: 30px;
+  margin-left: 150px;
+  width: 50%;
+}
+table, th {
+  border: none;
+  border-color: black;
+  margin: auto;
+}
+td {
+  border: none;
+  margin: 10px;
+}
+
+footer {
+  margin: none;
+  width: 100vw;
+  padding: 15px;
+  background-color: gray;
+  text-align: center;
+}
+
+.custom-table {
+  width: 100%;
+  height: auto;
+  margin: 50px auto;
+  border-collapse: collapse;
+  background-image: url(louisville_skyline.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border: none;
+}
+
+/* Link decorations */
+a {
+  font-family: 'Broadway', serif;
+}
+a:link {
+  color: orange;
+  text-decoration: none;
+}
+
+a:link2 {
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(28, 3, 87);
+}
+
+a:hover {
+  color: rgb(27, 164, 182);
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+}
+
+.image-overlay-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.background-image {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay text */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Broadway', serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 1200px;
+  height: 300px;
+  margin: 0;
+}
+
+.overlay-text h2 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.overlay-text a {
+  color: #f9f4eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.overlay-text a:hover {
+  color: #ffc107;
+}
+
+.btn-orange {
+  position: absolute;
+  display: inline-block;
+  background-color: #ff7a00;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e66a00;
+}
+
+p {
+  font-family:'Gill Sans MT Condensed', Times, serif;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-family: 'Gill Sans MT Condensed', Times, serif;
+  font-size: 1rem;
+}
+
+h3 {
+  margin: 0;
+  font-family: 'Broadway', sans-serif;
+  font-size: 4rem;
 }
