@@ -1,4 +1,8 @@
 /* Reset some default browser styles */
+html, body {
+  width: 100vw;
+}
+
 html, body, h1, p {
   margin: 0;
   padding: 0;
@@ -111,19 +115,17 @@ table {
     margin-left: 150px;
     width: 50%;
 }
+
 table, th {
     border: none;
     border-color: black;
     margin: auto;
 }
+
  td {
     border: none;
     margin: 10px;
  }
-
-.table-footer-notes {
-}
-
 
 footer {
     margin: none;
@@ -174,7 +176,7 @@ a:active {
 
 .image-overlay-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   max-width: 900px;
 }
 
@@ -189,7 +191,7 @@ a:active {
 .overlay-text {
   position: absolute;
   top: 50%;
-  left: 105%;
+  left: 108%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
@@ -219,7 +221,7 @@ a:active {
 }
 
 .btn-orange {
-    postion: absolute;
+    position: flex;
     display: inline-block;
     background-color: #ff7a00;
     color: white;
