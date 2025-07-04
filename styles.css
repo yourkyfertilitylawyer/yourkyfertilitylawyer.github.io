@@ -1,25 +1,19 @@
-/* Reset default styles and fix overflow */
+/* Reset some default browser styles */
 html, body {
-  width: 100%;
-  max-width: 100%;
+  width: 100vw;
+}
+
+html, body, h1, p {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-/* General resets */
-html, body, h1, p {
-  margin: 0;
-  padding: 0;
-}
-
-/* Font header style */
 .bioheader {
-  font-family: 'Broadway', serif;
-  color: orange;
-  font-size: 36px;
+    font-family: 'Broadway', serif;
+    color: orange;
+    font-size: 36;
 }
-
 body {
   font-family: Arial, sans-serif;
 }
@@ -27,14 +21,10 @@ body {
 /* Header container */
 .site-header {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px;
   background-color: white;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
+  margin-left: 20px;
 }
 
 /* Logo */
@@ -44,50 +34,71 @@ body {
   margin-right: 20px;
 }
 
-/* About me section */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px;
-  max-width: 1200px;
-  margin: auto;
+/*about me table*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .bio-text {
-  flex: 1 1 60%;
-  padding-right: 40px;
-  text-align: justify;
-  font-family: 'Broadway', serif;
+    flex: 1 1 60%;
+    padding-right: 40px;
+    text-align: justify;
+    font-family: 'Broadway', serif;
 }
 
 .bio-text h1 {
-  font-size: 2.5rem;
-  color: black;
-  margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 20px;
 }
 
 .bio-photo {
-  flex: 1 1 35%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .bio-photo img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .contact-text {
-  flex: 1 1 60%;
-  padding-right: 40px;
-  text-align: justify;
-  font-family: 'Comic Sans', serif;
+    flex: 1 1 60%;
+    padding-right: 40px;
+    text-align: justify;
+    font-family: 'Comic Sans', serif;
 }
 
-/* Text container */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .bio-text, .bio-photo {
+        padding: 0;
+    }
+    .bio-text {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+  .overlay-text {
+    font-size: 4vw;
+    padding: 4vw;
+    width: 90vw;
+  }
+}
+
+/* Text styling */
 .text-container {
   display: flex;
   flex-direction: column;
@@ -108,76 +119,75 @@ body {
   font-family: 'Notable', serif;
 }
 
-/* Table */
 table {
-  margin-top: 30px;
-  margin-left: 150px;
-  width: 50%;
+    margin-top: 30px;
+    margin-left: 150px;
+    width: 50%;
 }
 
 table, th {
-  border: none;
-  border-color: black;
-  margin: auto;
+    border: none;
+    border-color: black;
+    margin: auto;
 }
 
-td {
-  border: none;
-  margin: 10px;
-}
+ td {
+    border: none;
+    margin: 10px;
+ }
 
-.custom-table {
-  width: 100%;
-  height: auto;
-  margin: 50px auto;
-  border-collapse: collapse;
-  background-image: url(louisville_skyline.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  border: none;
-}
-
-/* Footer */
 footer {
-  width: 100%;
-  padding: 15px;
-  background-color: gray;
-  text-align: center;
+    margin: none;
+    width: 100vw;
+    padding: 15px;
+    background-color: gray;
+    text-align: center;
+
+}
+.custom-table {
+    width: 100%;
+    height: 300px auto;
+    margin: 50px auto;
+    border-collapse: collapse;
+    background-image: url(louisville_skyline.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border: none;
 }
 
-/* Links */
+/* link decorations */
 a {
-  font-family: 'Broadway', serif;
+    font-family: 'Broadway', serif;
 }
 a:link {
-  color: orange;
-  text-decoration: none;
+    color: orange;
+    text-decoration: none;
 }
 
 a:link2 {
-  color: black;
-  text-decoration: underline;
+    color: black;
+    text-decoration: underline;
 }
 
 a:visited {
-  color: rgb(28, 3, 87);
+    color: rgb(28, 3, 87);
 }
 
 a:hover {
-  color: rgb(27, 164, 182);
-  text-decoration: none;
+    color: rgb(27, 164, 182);
+    text-decoration: none;
 }
 
 a:active {
-  color: black;
+    color: black;
 }
 
-/* Overlay container */
 .image-overlay-container {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .background-image {
@@ -190,19 +200,21 @@ a:active {
 /* Overlay text */
 .overlay-text {
   position: absolute;
-  top: 50%;
-  left: 108%;
+  top: 30vw;
+  left: 50vw;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  font-size: 30px;
+  font-size: 4vw;
   font-family: 'Broadway', serif;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px 40px;
+  padding: 1vw 5vw;
   border-radius: 10px;
-  width: 1200px;
-  height: 300px;
+  width: 80vw;
+  max-width: 60vw;
+  height: auto;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .overlay-text h2 {
@@ -220,105 +232,36 @@ a:active {
   color: #ffc107;
 }
 
-/* Button */
 .btn-orange {
-  position: relative;
-  display: inline-block;
-  background-color: #ff7a00;
-  color: white;
-  padding: 12px 20px;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+    position: flex;
+    display: inline-block;
+    background-color: #ff7a00;
+    color: white;
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .btn-orange:hover {
-  background-color: #e66a00;
+    background-color: #e66a00;
 }
 
-/* Typography */
 p {
-  font-family: 'Gill Sans MT Condensed', Times, serif;
-  font-size: 1.5rem;
+    font-family:'Gill Sans MT Condensed', Times, serif;
+    font-size: 1.5rem;
 }
 
 h2 {
-  font-family: 'Gill Sans MT Condensed', Times, serif;
-  font-size: 1rem;
+    font-family: 'Gill Sans MT Condensed', Times, serif;
+    font-size: 1rem;
 }
 
 h3 {
-  margin: 0;
-  font-family: 'Broadway', sans-serif;
-  font-size: 4rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .bio-text, .bio-photo {
-    padding: 0;
-  }
-
-  .bio-text {
-    margin-bottom: 20px;
-  }
-
-  .site-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo {
-    height: 60px;
-    margin-bottom: 10px;
-  }
-
-  .main-title {
-    font-size: 32px;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-  }
-
-  .overlay-text {
-    position: static;
-    transform: none;
-    width: 100%;
-    padding: 20px;
-    font-size: 1rem;
-    margin-top: 20px;
-  }
-
-  .overlay-text h2 {
-    font-size: 2rem;
-  }
-
-  .image-overlay-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  table {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  p {
-    font-size: 1.2rem;
-  }
-
-  h2, h3 {
-    font-size: 1.5rem;
-  }
+    margin: 0;
+    font-family: 'Broadway', sans-serif;
+    font-size: 3rem;
 }
