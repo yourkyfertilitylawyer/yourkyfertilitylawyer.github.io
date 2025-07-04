@@ -25,6 +25,8 @@ body {
   padding: 20px;
   background-color: white;
   margin-left: 20px;
+  width: 100vw;
+  max-width: 95vw;
 }
 
 /* Logo */
