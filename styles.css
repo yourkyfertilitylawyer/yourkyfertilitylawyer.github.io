@@ -368,3 +368,9 @@ h1 {
 .mobile-h1 {
   font-size: 2rem;
 }
+
+.mobile-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
