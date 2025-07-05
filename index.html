@@ -6,6 +6,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Broadway&display=swap" rel="stylesheet">
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+  const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  // Only redirect if user is on mobile AND not requesting desktop view explicitly
+  if (isMobile && !window.location.href.includes("forceDesktop=true")) {
+    window.location.href = "indexmobile.html"; // replace with your actual mobile page
+  }
+</script>
     </head>
     <body>
         <header class="site-header">
@@ -38,7 +46,7 @@
                 </td>
             </table>
             <div class="logo-container">
-                <left><img src="LGBTQ_Ally.jpg" alt="LGBTQ Ally" class="logo" style="width:75px;height:50px"></left>
+                <left><img src="LGBTQ_Ally.jpg" alt="LGBTQ Ally" class="ally" style="width:75px;height:50px"></left>
             </div>
         </header>
         <div class="image-overlay-container">
