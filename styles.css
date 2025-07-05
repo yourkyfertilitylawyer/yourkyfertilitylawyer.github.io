@@ -364,3 +364,7 @@ h4 {
 h1 {
   color: orange;
 }
+
+.mobile-h1 {
+  font-size: 2rem;
+}
